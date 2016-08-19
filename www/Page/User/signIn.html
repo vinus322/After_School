@@ -1,0 +1,33 @@
+<ion-view view-title="signIn">
+  <ion-header-bar>
+    <h1 class="title">Login</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">Close</button>
+    </div>
+  </ion-header-bar>
+  <ion-content>
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">ID</span>
+          <input type="text" ng-model="data.login_id">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">PW</span>
+          <input type="password" ng-model="data.login_pw">
+        </label>
+
+        <label>
+          <button class="button button-block button-positive" ng-click="signin()">Log in</button>
+        </label>
+
+          <p align="center" ng-click="signUp()"> 회원가입하기 </p>
+      </div>
+
+
+    <div class="checks" align="center">
+      <input type="checkbox" id="myCheck" ng-checked="autoLogin.checked">
+      <label >자동 로그인</label>
+    </div>
+
+  </ion-content>
+</ion-view>
