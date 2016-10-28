@@ -1,12 +1,13 @@
 angular.module('starter.services', [])
 
-  .service('Test', function () {
+  .service('test', function () {
     this.add = function (x,y) {
       return x+y;
     };
   })
 
-.factory('Chats', function() {
+
+.factory('Chats', function($cordovaSQLite) {
   // Might use a resource here that returns a JSON array
 
   // Some fake testing data
@@ -36,6 +37,11 @@ angular.module('starter.services', [])
     lastText: 'This is wicked good ice cream.',
     face: 'img/mike.png'
   }];
+
+
+  var getAllChatRoom = [];
+  
+
 
   return {
     all: function() {

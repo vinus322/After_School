@@ -1,0 +1,46 @@
+
+
+
+<ion-view view-title="설정">
+
+  <ion-nav-buttons side="right">
+    <a class="button button-icon icon ion-ios-plus-outline "  ng-click="addGroup()"></a>
+  </ion-nav-buttons>
+
+  <ion-nav-buttons side="left">
+    <button class="button button-dark" ng-click="logout()">Logout</button>
+  </ion-nav-buttons>
+
+
+  <ion-content>
+
+    <a class="item item-thumbnail-center" align="center" href="#/userInfo/{{user_id}}">
+      <img ng-model="data.user_image" src="img/undefine.png" height="120"
+           style="-webkit-border-radius: 50%; -moz-border-radius:50%; border-radius: 50%;">
+      <p>내 정보확인</p>
+    </a>
+
+      <div class="item range range-positive">
+        <i class="icon ion-ios-bookmarks"></i>&nbsp;&nbsp;School</div>
+    <ion-list>
+
+      <div ng-repeat="School in Schools">
+        <ion-item class="item-stable  item-icon-left item-icon-right"
+                  ng-click="toggleSchool(School)"
+                  ng-class="{active: isSchoolShown(School)}">
+          <i class="icon" ng-class="isSchoolShown(School) ? 'ion-ios-chatbubble' : 'ion-ios-chatbubble-outline'"></i>
+          &nbsp;
+         {{School.name}}
+          <a class="button button-icon icon ion-ios-plus-outline" ng-click="addItem($index)"></a>
+
+        </ion-item>
+        <ion-item class="item-accordion"
+                  ng-repeat="Class in School.Class"
+                  ng-show="isSchoolShown(School)"
+                  href="#/class/{{Class}}">
+          {{Class.name}}
+        </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>

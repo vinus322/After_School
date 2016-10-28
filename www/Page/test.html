@@ -1,9 +1,6 @@
 <ion-view view-title="test">
   <ion-content class="padding">
-    <p >{{ko_encrypt}}</p>
-    <p>{{ko_decrypt}}</p>
-    <p>{{us_encrypt}}</p>
-    <p>{{us_decrypt}}</p>
-    <button ng-click="onload()">test</button>
+    <button class="button button-block button-dark " ng-click="identifyUser()">IdenrifyUser</button>
+    <button class="button button-block button-positive " ng-if="identified"  ng-click="pushRegister()">Register for push</button>
   </ion-content>
 </ion-view>

@@ -23,11 +23,61 @@ angular.module('starter.chatControllers', [])
     };
   })
 
-  .controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-    $scope.chat = Chats.get($stateParams.chatId);
+  .controller('ChatDetailCtrl', function($scope, $stateParams, Chats,  $ionicSideMenuDelegate) {
+
+    $scope.toggleLeft = function() {
+      $ionicSideMenuDelegate.toggleLeft();
+    };
 
 
+     $scope.chat = Chats.get($stateParams.chatId);
+     $scope.chatView = {};
+     var lastText = $scope.chat.lastText;
+     console.log($scope.chat);
+    // $scope.chatView.message =  {id: 'string', text: 'string', userId: 'string', date: '1455120273886'};
+    // $scope.chatView.you =  {userId: 'test', avatar: 'img/adam.jpg', userName: 'hello'};
+
+    var vm = this;
+    vm.you = {
+      userId: '4562KDJYE72930DST283DFY202Dd',
+      avatar: $scope.chat.face,
+      userName: $scope.chat.name
+    };
+    vm.messages = [{
+        id: '535d625f898df4e80e2a125e',
+        text: '안녕하세요!.',
+        userId: 'hilsqdhfods5990K226DHS01NOHoh',
+        avatar: 'http://polyligne.be/wp-content/uploads/2014/06/Man_Avatar.gif',
+        date: '1455110273886'
+      },{
+      id: '547643aeab43d1d4113abfd4',
+      text: lastText,
+      userId: '4562KDJYE72930DST283DFY202Dd',
+      avatar: 'http://polyligne.be/wp-content/uploads/2014/06/Man_Avatar.gif',
+      date: '1455110273886'
+  }];
 
 
+    vm.sendFunction = function (message) {
+      console.log('sendMessage : '+message);
+    };
+
+    vm.sendMessage = function(message) {
+      console.log('sendMessage : '+message);
+      // var d = new Date();
+      // vm.messages.push({
+      //   id:'',
+      //   text:message,
+      //   userId: vm.userId,
+      //   avater: vm.avater,
+      //   date:'1455110483886'
+      // });
+    };
+
+    $scope.chatView = vm;
+
+    $scope.$on('simple-chat-message-posted', function() {
+      console.log('onMessagePosted');
+    });
 
   });

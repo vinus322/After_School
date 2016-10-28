@@ -1,0 +1,51 @@
+{
+  "name": "ionic-service-push",
+  "version": "0.1.13",
+  "description": "Ionic Push Component",
+  "dependencies": {
+    "ionic-service-core": ">=0.1.8"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/driftyco/ionic-service-push-client.git"
+  },
+  "keywords": [
+    "Ionic",
+    "push"
+  ],
+  "author": {
+    "name": "Ionic"
+  },
+  "license": "Apache 2.0",
+  "bugs": {
+    "url": "https://github.com/driftyco/ionic-service-push-client/issues"
+  },
+  "homepage": "https://github.com/driftyco/ionic-service-push-client#readme",
+  "gitHead": "2b907487a1a192d1d3187943787f29e0bbadc5b4",
+  "_id": "ionic-service-push@0.1.13",
+  "scripts": {},
+  "_shasum": "db6c60e13001a1f057c0a627d1963950b7af23ad",
+  "_from": "ionic-service-push@latest",
+  "_npmVersion": "2.6.1",
+  "_nodeVersion": "0.10.36",
+  "_npmUser": {
+    "name": "fuiste",
+    "email": "rudy@drifty.com"
+  },
+  "dist": {
+    "shasum": "db6c60e13001a1f057c0a627d1963950b7af23ad",
+    "tarball": "https://registry.npmjs.org/ionic-service-push/-/ionic-service-push-0.1.13.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "fuiste",
+      "email": "rudy@drifty.com"
+    },
+    {
+      "name": "ericb",
+      "email": "eric@hellouser.net"
+    }
+  ],
+  "directories": {},
+  "_resolved": "https://registry.npmjs.org/ionic-service-push/-/ionic-service-push-0.1.13.tgz"
+}

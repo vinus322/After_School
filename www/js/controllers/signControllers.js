@@ -3,7 +3,15 @@
  */
 //
  angular.module('starter.signControllers', [])
-   .controller('SignInCtrl', function($state,$scope,$http, $ionicPopup,securityServices,$localstorage, $ajax) {
+
+   .controller('TitleCtrl', function($state,$scope,$timeout) {
+     $timeout(function() {
+       $state.go("signIn");
+     }, 3000);
+   })
+
+
+     .controller('SignInCtrl', function($state,$scope,$http, $ionicPopup,securityServices,$localstorage, $ajax) {
      var AES_key = "abcdefghijklmnopqrstuvwxyz123456";
      var init=function () {
        var dump={};
@@ -15,18 +23,23 @@
            if(res.script=="already logined")
              $state.go("tab.dash");
          }
+         if(res.result==-1){
+           $state.go("tab.chats");
+         }
        });
 
        var UserInfo = $localstorage.getObject('UserInfo');
        if(UserInfo===undefined) return;
        if(UserInfo.autoLogin)
-        $state.go("tab.dash");
+         $state.go("tab.chats");
      }
 
 
      $scope.autoLogin ={};
      $scope.autoLogin.checked = false;
      init();
+
+
      var data = $scope.data = {};
 
      $scope.signUp = function () {
@@ -61,7 +74,7 @@
                data.user_id = securityServices.service.aesDecrypt(data.user_id,AES_key);
                data.autoLogin = $scope.autoLogin.checked;
                $localstorage.setObject('UserInfo', data);
-               $state.go("tab.dash");
+               $state.go("tab.chats");
              }else{
               console.log(res.script);
                $ionicPopup.alert({
@@ -72,7 +85,7 @@
        });
        //   });
 
-//       $state.go("tab.dash");
+       $state.go("tab.chats");
 
      }
 

@@ -1,0 +1,15 @@
+
+<ion-view cache-view="false" view-title="Todo List">
+  <ion-content >
+    <div class="card" ng-repeat="event in events">
+      <div class="item item-divider" >
+        {{event.title}}
+      </div>
+      <div class="item item-text-wrap" ng-click="eventClick(event)">
+        {{event.content}}
+        <p/>
+        <strong>When: {{event.start|date:'yyyy/MM/dd'}} ~ {{event.end|date:'yyyy/MM/dd'}}</strong>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,17 @@
+
+<ion-view cache-view="false" view-title="Calendar">
+  <ion-content  scroll="false">
+    <!--<div ui-calendar="uiCalendarConfig.calendar" ng-model="eventSources" calendar="myCalender"></div>-->
+    <!--&lt;!&ndash;&lt;!&ndash;<div>&ndash;&gt;&ndash;&gt;-->
+    <div ui-calendar="uiConfig.calendar" class="span8 calendar" ng-model="eventSources"></div>
+
+    <!--<div class="ng-scope" ng-show="alertMessage != undefined &amp;&amp; alertMessage != ''">-->
+      <!--<h4> {{alertMessage}}</h4>-->
+    <!--</div>-->
+    <button class="button button-icon icon ion-plus-circled" style="float: right;" ng-click="goAdd()">
+      &nbsp;&nbsp;link to add page->
+    </button>
+
+   </ion-content>
+
+</ion-view>

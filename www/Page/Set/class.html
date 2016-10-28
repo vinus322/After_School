@@ -1,0 +1,23 @@
+<!--<ion-nav-view name="tab-class">-->
+<ion-header-bar class="bar-stable">
+  <h1 class="title">{{Class.name}}</h1>
+  <a class="button button-icon icon ion-ios-plus-outline "  ng-click="addGroup()"></a>
+</ion-header-bar>
+
+<ion-view view-title="User">
+
+  <ion-content>
+    <div class="item range range-positive">
+      <i class="icon ion-ios-bookmarks"></i>&nbsp;&nbsp;{{Class.name}}
+    </div>
+
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="user in Users" type="item-text-wrap"">
+        <img ng-src="{{user.user_image}}">
+        <h2>{{user.user_name}}</h2>
+        <p>{{user.phone_number}}</p>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
+<!--</ion-nav-view>-->

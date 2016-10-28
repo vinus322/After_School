@@ -1,13 +1,13 @@
 <ion-view view-title="signUp">
-  <ion-header-bar>
-    <h1 class="title">SignUp</h1>
+  <ion-header-bar class="bar bar-header bar-dark">
+    <h1 class="title ">SignUp</h1>
   </ion-header-bar>
 
-  <ion-content>
+  <ion-content scroll="false" style="background-color: #50B4C8">
     <div class="list list-inset">
 
       <a class="item item-thumbnail-center" align="center" ng-click="update()">
-        <img ng-model="data.user_image" src="/img/ben.png" height="150" width="150"
+        <img ng-model="data.user_image" src="img/undefine.png" height="150" width="150"
              style="-webkit-border-radius: 50%; -moz-border-radius:50%; border-radius: 50%;">
       </a>
 
@@ -38,7 +38,7 @@
         <input type="radio" ng-model="data.user_authority" value="admin">행정
       </div>
     </div>
-    <button ng-click="signUp()" class="button button-block button-positive">
+    <button ng-click="signUp()" class="button button-block button-dark">
       회원가입
     </button>
   </ion-content>

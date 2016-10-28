@@ -10,6 +10,9 @@
     <link href="lib/ionic/css/ionic.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 
+    <link rel="stylesheet" href="lib/fullcalendar/dist/fullcalendar.css">
+
+
     <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
     <link href="css/ionic.app.css" rel="stylesheet">
     -->
@@ -18,11 +21,29 @@
     <script src="lib/ionic/js/ionic.bundle.js"></script>
 
 
-    <!-- add more libraries -->
-    <script src=”lib/ngstorage/ngStorage.min.js”></script>
-
     <!-- cordova script (this will be a 404 during development) -->
+    <script src="js/ng-cordova.min.js"></script>
     <script src="cordova.js"></script>
+
+
+    <!-- add more libraries -->
+    <!--<script src="lib/ngstorage/ngStorage.min.js;"></script>-->
+    <script src="lib/angular/angular.js"></script>
+    <script src="lib/moment/moment.js"></script>
+    <!--<script src="lib/angular-moment/angular-moment.js"></script>-->
+
+    <script type="text/javascript" src="lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/angular-ui-calendar/src/calendar.js"></script>
+    <script type="text/javascript" src="lib/fullcalendar/dist/fullcalendar.min.js"></script>
+    <script type="text/javascript" src="lib/fullcalendar/dist/gcal.js"></script>
+
+    <script src="lib/angular-websocket/angular-websocket.js"></script>
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <script src="lib/ionic-service-core/ionic-core.js"></script>
+    <script src="lib/ionic-service-push/ionic-push.js"></script>
+
+
+
 
     <!-- your app's js -->
     <script src="js/connect/ajax.js"></script>
@@ -32,24 +53,36 @@
     <script src="js/services/services.js"></script>
     <script src="js/services/securityServices.js"></script>
     <script src="js/services/localStorage.js"></script>
+    <script src="js/services/todoServies.js"></script>
+    <script src="js/services/calendarServices.js"></script>
+    <script src="js/services/ClassServices.js"></script>
+
 
     <script src="js/controllers/signControllers.js"></script>
-    <script src="js/controllers/calenderControllers.js"></script>
+    <script src="js/controllers/calendarControllers.js"></script>
     <script src="js/controllers/chatControllers.js"></script>
     <script src="js/controllers/setControllers.js"></script>
-
-
-
     <script src="js/controllers/testControllers.js"></script>
+
+
+
+    <script src="js/controllers/todoControllers.js"></script>
+    <script src="js/controllers/addControllers.js"></script>
+
+
+    <!-- Simple Chat -->
+    <link rel="stylesheet" href="lib/angular-simple-chat/dist/angular-simple-chat.min.css">
+    <script src="lib/angular-simple-chat/dist/angular-simple-chat.min.js"></script>
   </head>
   <body ng-app="starter">
     <!--
       The nav bar that will be updated as we navigate between views.
     -->
-    <ion-nav-bar class="bar bar-header bar-dark">
-      <ion-nav-back-button>
-      </ion-nav-back-button>
-    </ion-nav-bar>
+
+    <!--<ion-nav-bar class="bar bar-header bar-dark">-->
+      <!--<ion-nav-back-button>-->
+      <!--</ion-nav-back-button>-->
+    <!--</ion-nav-bar>-->
     <!--
       The views will be rendered in the <ion-nav-view> directive below
       Templates are in the /Page folder (but you could also
